@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Grievance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Submit your grievance 💌</h2>
+    <form id="grievanceForm">
+      <label>Title</label>
+      <input type="text" name="title" required>
+      
+      <label>What's bothering you?</label>
+      <textarea name="details" required></textarea>
+      
+      <label>Mood 😍😔😡</label>
+      <select name="mood">
+        <option>😊 Happy</option>
+        <option>😢 Sad</option>
+        <option>😡 Angry</option>
+        <option>🥰 Loved</option>
+        <option>🙄 Annoyed</option>
+      </select>
+      
+      <label>Severity</label>
+      <select name="severity">
+        <option>A KitKat would fix this 🍫</option>
+        <option>A Burger would fix this 🍔</option>
+        <option>I need Kisses 😘</option>
+        <option>I need Hugs 🤗</option>
+        <option>Dance for me 🛍️</option>
+        <option>Sing for me 🛍️</option>
+        <option>A Long Drive 🚗</option>
+        <option>A Movie Night 🎬</option>
+        <option>A Surprise Gift 🎁</option>
+        <option>A Cute Text 💌</option>
+        <option>Monkey must Apologize 🐵</option>
+      </select>
+      
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
