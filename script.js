@@ -14,3 +14,25 @@ document.getElementById("loginForm")?.addEventListener("submit", function(e) {
     document.getElementById("errorMsg").textContent = "Incorrect Username or Password";
   }
 });
+
+// Grievance form submission
+document.getElementById("grievanceForm")?.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const formData = {
+    title: document.querySelector("input[name='title']").value,
+    details: document.querySelector("textarea[name='details']").value,
+    mood: document.querySelector("select[name='mood']").value,
+    severity: document.querySelector("select[name='severity']").value
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbwzXGqq_9yRoUjA8suV7ppdAAqitt2IGMduue7o2iJsfC-TKs3LKNvdTyg-OW6HiZg/exec", {
+    method: "POST",
+    body: JSON.stringify(formData)
+  })
+  .then(res => res.text())
+  .then(data => {
+    window.location.href = "thankyou.html";
+  })
+  .catch(err => alert("Error submitting grievance!"));
+});
