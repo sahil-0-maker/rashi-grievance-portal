@@ -1,49 +1,60 @@
+/* Import a cleaner Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
-    background: #ffe6f0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: #d63384;
-    text-align: center;
-  }
-  
+  background: #ffe6f0;
+  font-family: 'Poppins', sans-serif;
+  color: #d63384;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling */
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 500px;
+  background: #fff0f6;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Make inputs, buttons full width */
+input, textarea, select, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 2px solid #f48fb1;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* Buttons */
+.btn {
+  margin-top: 20px;
+  background: #ec407a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #d81b60;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
   .container {
-    margin: 100px auto;
-    padding: 30px;
-    max-width: 500px;
-    background: #fff0f6;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 15px;
   }
-  
   h1, h2 {
-    color: #c2185b;
+    font-size: 1.5rem;
   }
-  
-  label {
-    display: block;
-    margin-top: 15px;
+  input, textarea, select, button {
+    font-size: 14px;
   }
-  
-  input, textarea, select {
-    width: 90%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 2px solid #f48fb1;
-    border-radius: 10px;
-    background: #fff;
-  }
-  
-  .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #ec407a;
-    color: white;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .btn:hover {
-    background: #d81b60;
-  }
-  
+}
