@@ -1,3 +1,12 @@
+// Redirect to index.html if the page is refreshed or opened directly
+if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+  if (!window.location.pathname.endsWith("index.html") && 
+      !window.location.pathname.endsWith("/") ) {
+    window.location.href = "index.html";
+  }
+}
+
+
 // Login validation
 document.getElementById("loginForm")?.addEventListener("submit", function(e) {
   e.preventDefault();
