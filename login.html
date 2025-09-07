@@ -8,15 +8,17 @@
 <body>
   <div class="container">
     <h2>Rashi's Grievance Portal</h2>
-    <form action="grievance.html">
+    <form id="loginForm">
       <label>Username</label>
-      <input type="text" required>
-      
+      <input type="text" id="username" required>
+
       <label>Password</label>
-      <input type="password" required>
-      
+      <input type="password" id="password" required>
+
       <button type="submit" class="btn">Login</button>
     </form>
+    <p id="errorMsg" style="color:red; margin-top:10px;"></p>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
