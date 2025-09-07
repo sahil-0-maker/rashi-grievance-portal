@@ -1,3 +1,16 @@
+// Protect grievance.html & thankyou.html
+const protectedPages = ["grievance.html", "thankyou.html"];
+
+protectedPages.forEach(page => {
+  if (window.location.pathname.endsWith(page)) {
+    const loggedIn = sessionStorage.getItem("isLoggedIn");
+    if (loggedIn !== "true") {
+      window.location.href = "index.html"; // 🚫 kick back to home if not logged in
+    }
+  }
+});
+
+
 // Redirect to index.html if the page is refreshed or opened directly
 if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
   if (!window.location.pathname.endsWith("index.html") && 
@@ -5,7 +18,6 @@ if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
     window.location.href = "index.html";
   }
 }
-
 
 // Login validation
 document.getElementById("loginForm")?.addEventListener("submit", function(e) {
@@ -18,7 +30,8 @@ document.getElementById("loginForm")?.addEventListener("submit", function(e) {
   const validPasswords = ["24092024", "16012001"];
 
   if (validUsers.includes(username) && validPasswords.includes(password)) {
-    window.location.href = "grievance.html"; // ✅ go to next page
+    sessionStorage.setItem("isLoggedIn", "true"); // ✅ save login flag
+    window.location.href = "grievance.html";
   } else {
     document.getElementById("errorMsg").textContent = "Incorrect Username or Password";
   }
