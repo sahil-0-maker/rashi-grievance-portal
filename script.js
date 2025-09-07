@@ -25,10 +25,10 @@ document.getElementById("loginForm")?.addEventListener("submit", function(e) {
   e.preventDefault();
 
   const username = document.getElementById("username").value.trim().toLowerCase();
-  const password = document.getElementById("password").value.trim();
+  const password = document.getElementById("password").value.trim().toLowerCase();
 
-  const validUsers = ["mouse", "monkey", "cat", "crocodile", "sheep", "cockroach"];
-  const validPasswords = ["24092024", "16012001"];
+  const validUsers = ["mouse", "monkey", "cat", "crocodile", "sheep", "cockroach", "bhedu", "rashbash", "catie", "doggo", "rashi", "rashika"];
+  const validPasswords = ["24092024", "16012001", "love"];
 
   if (validUsers.includes(username) && validPasswords.includes(password)) {
     sessionStorage.setItem("isLoggedIn", "true"); // ✅ stays until browser tab closed
